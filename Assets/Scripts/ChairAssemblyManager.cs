@@ -14,6 +14,7 @@ public class ChairAssemblyManager : MonoBehaviour
         [HideInInspector] public Quaternion[] startRotations;
     }
 
+    [Header("Étapes de montage")]
     [SerializeField] private AssemblyStep[] steps;
 
     [Header("Animation")]
@@ -23,29 +24,13 @@ public class ChairAssemblyManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TMP_Text stepText;
     [SerializeField] private TMP_Text progressText;
-    [SerializeField] private TMP_Text scoreText;
 
     private int currentStep = 0;
-    private int score = 0;
     private bool isMoving = false;
-
-    private Transform currentPart;
-    private Transform currentTarget;
 
     void Start()
     {
-        foreach (AssemblyStep step in steps)
-        {
-            step.startPositions = new Vector3[step.parts.Length];
-            step.startRotations = new Quaternion[step.parts.Length];
-
-            for (int i = 0; i < step.parts.Length; i++)
-            {
-                step.startPositions[i] = step.parts[i].position;
-                step.startRotations[i] = step.parts[i].rotation;
-            }
-        }
-
+        SaveStartPositions();
         UpdateUI();
     }
 
@@ -92,16 +77,13 @@ public class ChairAssemblyManager : MonoBehaviour
 
         isMoving = true;
         currentStep++;
-        score += 10;
 
         UpdateUI();
     }
 
-    // 🔥 RESET FUNCTION
     public void ResetAssembly()
     {
         currentStep = 0;
-        score = 0;
         isMoving = false;
 
         foreach (AssemblyStep step in steps)
@@ -116,20 +98,38 @@ public class ChairAssemblyManager : MonoBehaviour
         UpdateUI();
     }
 
+    private void SaveStartPositions()
+    {
+        foreach (AssemblyStep step in steps)
+        {
+            step.startPositions = new Vector3[step.parts.Length];
+            step.startRotations = new Quaternion[step.parts.Length];
+
+            for (int i = 0; i < step.parts.Length; i++)
+            {
+                step.startPositions[i] = step.parts[i].position;
+                step.startRotations[i] = step.parts[i].rotation;
+            }
+        }
+    }
+
     private void UpdateUI()
     {
         if (stepText != null)
         {
             if (currentStep < steps.Length)
+            {
                 stepText.text = steps[currentStep].stepName;
+            }
             else
+            {
                 stepText.text = "Montage terminé !";
+            }
         }
 
         if (progressText != null)
+        {
             progressText.text = "Progression : " + currentStep + " / " + steps.Length;
-
-        if (scoreText != null)
-            scoreText.text = "Score : " + score;
+        }
     }
 }
