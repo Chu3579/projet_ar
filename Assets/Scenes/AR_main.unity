@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a2116237308405c95dac26c514b5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceOnClick
-  prefabToPlace: {fileID: 5576349757463986519, guid: 934bba149926546d185c951d323abba6, type: 3}
+  prefabToPlace: {fileID: 2228292099810087415, guid: eb9d46e05594e4b8b95b780e1267641a, type: 3}
   raycastManager: {fileID: 1128049382}
 --- !u!1 &1035290482 stripped
 GameObject:
@@ -725,65 +725,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1001 &1603035629
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.65029
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.93099
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5145968391802383990, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576349757463986519, guid: 934bba149926546d185c951d323abba6, type: 3}
-      propertyPath: m_Name
-      value: ChairExperience
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 174774648363318307, guid: 934bba149926546d185c951d323abba6, type: 3}
-    - {fileID: 1441300560259047928, guid: 934bba149926546d185c951d323abba6, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 934bba149926546d185c951d323abba6, type: 3}
 --- !u!1 &1699712829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,4 +1066,3 @@ SceneRoots:
   - {fileID: 286356881}
   - {fileID: 6915204307925726134}
   - {fileID: 1246422651}
-  - {fileID: 1603035629}
