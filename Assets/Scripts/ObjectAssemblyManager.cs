@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class ChairAssemblyManager : MonoBehaviour
+public class ObjectAssemblyManager : MonoBehaviour
 {
     [System.Serializable]
     public class AssemblyStep
